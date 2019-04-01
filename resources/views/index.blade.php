@@ -1,4 +1,8 @@
-<div>
+@extends('layouts.app')
+
+@section('content')
+
+<div class="container">
     @foreach($students as $student)
         <p>Nome: {{$student-> firstname}}</p>
         <p>Sobrenome: {{$student-> lastname}}</p>
