@@ -69,11 +69,11 @@ class StudentController extends Controller
         $student = StudentModel::find($id);
 
         return view('edit-student', [
-            'id' => $id,            
-            'firstname' => $student -> firstname,
-            'lastname' => $student -> lastname,
-            'grade' => $student -> grade,
-            'registry' => $student -> registry
+            'id' => $student->id,            
+            'firstname' => $student->firstname,
+            'lastname' => $student->lastname,
+            'grade' => $student->grade,
+            'registry' => $student->registry
         ]);
     }
 
@@ -91,7 +91,8 @@ class StudentController extends Controller
         $student-> lastname = $request->input('lastname');
         $student-> grade = $request->input('grade');
         $student-> registry = $request->input('registry');
-        $student->save();
+        $student-> update();
+        return redirect()->to('/student');
     }
 
     /**
@@ -104,5 +105,7 @@ class StudentController extends Controller
     {
         $student = StudentModel::find($id);
         $student->delete();
+
+        return redirect()->to('/student');
     }
 }

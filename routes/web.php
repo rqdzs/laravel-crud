@@ -19,5 +19,4 @@ Route::resource('student', 'StudentController');
 
 Route::get('/student/destroy/{id}', 'StudentController@destroy');
 
-
-
+Route::put('/student/{id}', 'StudentController@update');
