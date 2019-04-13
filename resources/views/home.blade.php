@@ -13,9 +13,8 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
-                    You are logged in!
-                </div>
+                    <p>Para acessar a lista de alunos, clique auqi!</p>
+                    <a href="/student">Alunos</a>                    
             </div>
         </div>
     </div>
