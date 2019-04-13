@@ -23,3 +23,7 @@ Route::put('/student/{id}', 'StudentController@update');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
